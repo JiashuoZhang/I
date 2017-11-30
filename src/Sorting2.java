@@ -74,12 +74,8 @@ public class Sorting2 {
     private static int partition(int[] A, int l, int h) {
         int pivot = A[h];
         int i = l - 1;
-        for (int j = l; j < h; j++) {
-            if (A[j] < pivot) {
-                i++;
-                swap(A, i, j);
-            }
-        }
+        for (int j = l; j < h; j++)
+            if (A[j] < pivot) swap(A, ++i, j);
         swap(A, ++i, h);
         return i;
     }
