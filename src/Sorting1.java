@@ -1,6 +1,7 @@
 public class Sorting1 {
 
     public static void insertionSort(int[] A) {
+        if (A == null || A.length == 0) return;
         for (int i = 0; i < A.length; i++) {
             int j = i;
             while (j >= 1 && A[j] < A[j - 1]) {
@@ -12,6 +13,7 @@ public class Sorting1 {
 
     /* Put the min number to the front. */
     public static void selectionSort(int[] A) {
+        if (A == null || A.length == 0) return;
         for (int i = 0; i < A.length; i++) {
             int minIndex = i;
             for (int j = i; j < A.length; j++)
@@ -22,6 +24,7 @@ public class Sorting1 {
 
     /* Swap pairs until all numbers sorted. */
     public static void bubbleSort(int[] A) {
+        if (A == null || A.length == 0) return;
         boolean swapped = true;
         while (swapped) {
             swapped = false;
